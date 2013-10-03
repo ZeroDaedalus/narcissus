@@ -2,7 +2,7 @@
 <head>
     <title><?php bloginfo('name'); ?></title>
     <meta charset="<?php bloginfo('charset'); ?>" />
-    <link rel="stylesheet" type="text/css" src="<?php bloginfo('stylesheet_url'); ?>" />
+    <link rel="stylesheet" type="text/css" src="<?php bloginfo('template_url'); ?>/stylesheets/style.css" />
 </head>
 <body>
     <div id="wrapper">
