@@ -1,3 +1,4 @@
+/*  Styles are preprocessed in Sass. Any modifications to the css file will be overwritten  */
 /* line 61, ../../../../../../lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html {
   font-size: 112.5%;
@@ -626,7 +627,7 @@ object {
   display: none;
 }
 
-/* line 26, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
 body {
   font-family: sans-serif;
   width: 80%;
@@ -635,62 +636,74 @@ body {
   background-color: #e3e3e3;
 }
 
-/* line 34, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 a {
   text-decoration: none;
 }
-/* line 38, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 a:link, a:visited {
   color: #00cc00;
 }
-/* line 44, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 a:hover, a:focus, a:active {
   color: #ff7400;
   outline: 0;
 }
 
-/* line 50, ../sass/style.scss */
+/* line 55, ../sass/style.scss */
 .site-branding {
   width: 100%;
 }
-/* line 53, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 .site-branding .site-title {
   float: left;
 }
-/* line 57, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 .site-branding .site-description {
   float: right;
 }
 
-/* line 63, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 .site-title,
 .site-description,
 #site-navigation {
   clear: none;
 }
 
-/* line 67, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 #site-navigation {
   float: left;
 }
 
-/* line 71, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 #site-navigation .menu li {
   margin-left: 40px;
 }
-/* line 74, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 #site-navigation .menu li a {
   padding: 5px;
   border-radius: 10%;
   border: 2px transparent solid;
 }
-/* line 80, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 #site-navigation .menu li a:link, #site-navigation .menu li a:visited {
   color: #ff7400;
 }
-/* line 86, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 #site-navigation .menu li a:hover, #site-navigation .menu li a:focus, #site-navigation .menu li a:active {
   background-color: #ff7400;
   color: #00cc00;
   outline: 0;
+}
+
+/* line 101, ../sass/style.scss */
+#primary {
+  float: left;
+  width: 73%;
+}
+
+/* line 106, ../sass/style.scss */
+#secondary {
+  float: right;
+  width: 25%;
 }
