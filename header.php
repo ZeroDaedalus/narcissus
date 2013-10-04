@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/stylesheets/style.css" />
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('grad'); ?>>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
