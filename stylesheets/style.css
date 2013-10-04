@@ -71,12 +71,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 17, ../sass/style.scss */
+/*  Constants   */
+/* line 18, ../sass/style.scss */
 body {
   text-align: center;
 }
 
-/* line 21, ../sass/style.scss */
+/* line 22, ../sass/style.scss */
 #wrapper {
   display: block;
   border: 1px #a2a2a2 solid;
@@ -84,32 +85,32 @@ body {
   margin: 0 auto;
 }
 
-/* line 28, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 header {
   border: 2px #a2a2a2 solid;
 }
 
-/* line 32, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 #content {
   width: 75%;
   border: 2px #a2a2a2 solid;
   float: left;
 }
 
-/* line 38, ../sass/style.scss */
+/* line 39, ../sass/style.scss */
 #sidebar {
   border: 2px #a2a2a2 solid;
   width: 23%;
   float: right;
 }
 
-/* line 44, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 footer {
   clear: both;
   border: 2px #a2a2a2 solid;
 }
 
-/* line 49, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 .title {
   font-size: 11pt;
   font-family: verdana;
