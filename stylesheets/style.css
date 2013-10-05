@@ -749,3 +749,8 @@ footer {
 .sub-menu {
   background-color: #a2a2a2;
 }
+
+/* line 151, ../sass/style.scss */
+article.sticky > .entry-content {
+  border: 2px #e34234 dashed;
+}
