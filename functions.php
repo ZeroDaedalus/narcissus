@@ -56,11 +56,13 @@ function narcissus_setup() {
 	/**
 	 * Setup the WordPress core custom background feature.
 	 */
-	add_theme_support( 'custom-background', apply_filters( 'narcissus_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-}
+     /**    Removed. Custom backgrounds will be featured in a later release
+        add_theme_support( 'custom-background', apply_filters( 'narcissus_custom_background_args', array(
+            'default-color' => 'ffffff',
+            'default-image' => '',
+        ) ) );
+    */
+    }
 endif; // narcissus_setup
 add_action( 'after_setup_theme', 'narcissus_setup' );
 
