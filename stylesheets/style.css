@@ -66,13 +66,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 61, ../../../../../../lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html {
-  font-size: 112.5%;
+  font-size: 100%;
 }
 
 /* line 64, ../../../../../../lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
-  font-size: 18px;
-  line-height: 1.33333em;
+  font-size: 16px;
+  line-height: 1.5em;
 }
 
 /* =Global
@@ -822,21 +822,21 @@ footer {
 }
 
 /* line 108, ../sass/style.scss */
-#site-navigation .menu > li {
+#site-navigation .nav-menu > li {
   margin-left: 40px;
 }
 /* line 111, ../sass/style.scss */
-#site-navigation .menu > li a {
+#site-navigation .nav-menu > li a {
   padding: 5px;
   border-radius: 10%;
   border: 2px transparent solid;
 }
 /* line 117, ../sass/style.scss */
-#site-navigation .menu > li a:link, #site-navigation .menu > li a:visited {
+#site-navigation .nav-menu > li a:link, #site-navigation .nav-menu > li a:visited {
   color: #e34234;
 }
 /* line 123, ../sass/style.scss */
-#site-navigation .menu > li a:hover, #site-navigation .menu > li a:focus, #site-navigation .menu > li a:active {
+#site-navigation .nav-menu > li a:hover, #site-navigation .nav-menu > li a:focus, #site-navigation .nav-menu > li a:active {
   background-color: #e34234;
   color: #00cc00;
   outline: 0;

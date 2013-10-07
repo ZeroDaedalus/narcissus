@@ -15,7 +15,9 @@
 			<?php do_action( 'narcissus_credits' ); ?>
 			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'narcissus' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'narcissus' ), 'Narcissus', '<a href="http://zerodaedalus.com" rel="designer">Zero Daedalus</a>' ); ?>
+			<?php 
+                $myTheme = wp_get_theme();
+                printf( __( 'Theme: %1$s by %2$s.', 'narcissus' ), 'Narcissus', '<a href="' . $myTheme->get( 'AuthorURI') . '" rel="designer">Zero Daedalus</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
