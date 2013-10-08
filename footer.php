@@ -10,6 +10,7 @@
 
 	</div><!-- #content -->
 
+</div><!-- #page -->
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<?php do_action( 'narcissus_credits' ); ?>
@@ -20,7 +21,6 @@
                 printf( __( 'Theme: %1$s by %2$s.', 'narcissus' ), 'Narcissus', '<a href="' . $myTheme->get( 'AuthorURI') . '" rel="designer">Zero Daedalus</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 
