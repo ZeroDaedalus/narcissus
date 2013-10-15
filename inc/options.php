@@ -72,7 +72,7 @@ class Narcissus_Settings
         );
 
         add_settings_field(
-            'credit-link', //ID
+            'credit_link', //ID
             'Remove credit links from footer', //Title
             array( $this, 'credit_link_callback' ), //Callback
             'narcissus-setting-admin', //Page
@@ -87,10 +87,8 @@ class Narcissus_Settings
      */
     public function sanitize( $input ) {
     $new_input = array();
-    if( !isset( $input['credit_link']))
-        $input['credit_link'] = null;
     if( isset( $input['credit_link']))
-        $new_input['id_number'] = ( $input['id_number'] == 1 ? 1 : 0 ) ;
+        $new_input['credit_link'] = $input['credit_link'] == 1 ? 1 : 0 ;
 
     return $new_input;
     }
@@ -100,9 +98,9 @@ class Narcissus_Settings
      */
     public function credit_link_callback() {
         ?>
+        <input type="hidden" name="my_option_name[credit_link]" value="0">
         <input type="checkbox" id="credit_link" name="my_option_name[credit_link]" value="1" 
-        <?php checked( '1', $options['credit_link']); ?> />
-        <?php
+        <?php checked( $this->options['credit_link'], 1 );       
     }
 }
 
