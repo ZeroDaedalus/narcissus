@@ -37,7 +37,7 @@ class Narcissus_Settings
      */
     public function create_admin_page() {
         //Set Class property
-        $this->options = get_option( 'my_option_name' );
+        $this->options = get_option( 'narcissus_theme_options' );
         ?>
         <div class="wrap">
             <?php screen_icon(); ?>
@@ -45,7 +45,7 @@ class Narcissus_Settings
             <form method="post" action="options.php">
             <?php
                 //This prints out all hidden setting fields
-                settings_fields( 'my_option_group' );
+                settings_fields( 'narcissus_option_group' );
                 do_settings_sections( 'narcissus-setting-admin' );
                 submit_button();
             ?>
@@ -59,21 +59,21 @@ class Narcissus_Settings
      */
     public function page_init() {
         register_setting(
-            'my_option_group',
-            'my_option_name',
+            'narcissus_option_group',
+            'narcissus_theme_options',
             array( $this, 'sanitize' )
         );
 
         add_settings_section(
             'setting_section_id', //ID
             'General Settings', //Title
-            null, //Callback
+            array( $this, 'print_section_info'), //Callback
             'narcissus-setting-admin' //Page
         );
 
         add_settings_field(
             'credit_link', //ID
-            'Remove credit links from footer', //Title
+            'Show credit links in footer', //Title
             array( $this, 'credit_link_callback' ), //Callback
             'narcissus-setting-admin', //Page
             'setting_section_id' //Section
@@ -88,19 +88,31 @@ class Narcissus_Settings
     public function sanitize( $input ) {
     $new_input = array();
     if( isset( $input['credit_link']))
-        $new_input['credit_link'] = $input['credit_link'] == 1 ? 1 : 0 ;
-
+        $new_input['credit_link'] = $input['credit_link'];
     return $new_input;
     }
      
+    /**
+     *  Setting Section Callback
+     */
+    public function print_section_info() {
+        echo "Here you can customize the theme to fit your needs.<br />";
+        //Testing options displays
+        $opt = get_option('narcissus_theme_options');
+        printf ("The Value of [credit_link] is %s", $opt['credit_link']);
+    }
     /**
      *  Getting settings option array and print one of it's values
      */
     public function credit_link_callback() {
         ?>
-        <input type="hidden" name="my_option_name[credit_link]" value="0">
-        <input type="checkbox" id="credit_link" name="my_option_name[credit_link]" value="1" 
-        <?php checked( $this->options['credit_link'], 1 );       
+        <select id="narcissus_theme_options[credit_link]" name="narcissus_theme_options[credit_link]">
+            <option value="both" <?php selected( $this->options['credit_link'], 'both' ); ?>>Both</option>
+            <option value="wordpress" <?php selected( $this->options['credit_link'], 'wordpress' ); ?>>WordPress</option>
+            <option value="theme" <?php selected( $this->options['credit_link'], 'theme' ); ?>>Theme/Author</option>
+            <option value="none" <?php selected( $this->options['credit_link'], 'none' ); ?>>None</option>
+        </select>
+        <?php
     }
 }
 

@@ -14,11 +14,20 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<?php do_action( 'narcissus_credits' ); ?>
-			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'narcissus' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php 
+            <?php 
+                $theme_options = get_option('narcissus_theme_options');
+                if ( 'none' !== $theme_options['credit_link'] ) {
+                    if ( 'both' == $theme_options['credit_link'] || 'wordpress' == $theme_options['credit_link']) {?>
+                        <?php printf( __( 'Proudly powered by %s', 'narcissus' ), '<a href="http://wordpress.org/" rel="generator">WordPress</a>' ); ?>
+                        <?php if ( 'both' == $theme_options['credit_link']) { ?>
+                            <span class="sep"> | </span>
+                        <?php }  
+                    }
+                    if ( 'both' == $theme_options['credit_link'] || 'theme' == $theme_options['credit_link']) {
                 $myTheme = wp_get_theme();
-                printf( __( 'Theme: %1$s by %2$s.', 'narcissus' ), 'Narcissus', '<a href="' . $myTheme->get( 'AuthorURI') . '" rel="designer">Zero Daedalus</a>' ); ?>
+                printf( __( 'Theme: %1$s by %2$s.', 'narcissus' ), 'Narcissus', '<a href="' . $myTheme->get( 'AuthorURI') . '" rel="designer">Zero Daedalus</a>' );
+                    }?>
+            <?php } ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 
