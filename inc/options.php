@@ -87,8 +87,16 @@ class Narcissus_Settings
      */
     public function sanitize( $input ) {
     $new_input = array();
-    if( isset( $input['credit_link']))
-        $new_input['credit_link'] = $input['credit_link'];
+    //Sanitize Credit Link
+    if( isset( $input['credit_link'] ) && (
+                'both'          == $input['credit_link'] ||
+                'wordpress'     == $input['credit_link'] ||
+                'theme'         == $input['credit_link'] ||
+                'none'          == $input['credit_link'] ) )
+            $new_input['credit_link'] = $input['credit_link'];
+    else
+        $new_input['credit_link'] = 'both';
+
     return $new_input;
     }
      
@@ -96,11 +104,9 @@ class Narcissus_Settings
      *  Setting Section Callback
      */
     public function print_section_info() {
-        echo "Here you can customize the theme to fit your needs.<br />";
-        //Testing options displays
-        $opt = get_option('narcissus_theme_options');
-        printf ("The Value of [credit_link] is %s", $opt['credit_link']);
+        echo "Here you can customize the theme to fit your needs.";
     }
+
     /**
      *  Getting settings option array and print one of it's values
      */
