@@ -85,6 +85,22 @@ add_action( 'widgets_init', 'narcissus_widgets_init' );
  * Enqueue scripts and styles
  */
 function narcissus_scripts() {
+    /**
+     *  Load new layout style depending on 'custom_sidebar' option
+     */
+    $option = get_option('narcissus_theme_options');   
+    $flag = $option['custom_sidebar'];
+    switch ($flag) {
+        case 'left':
+            wp_enqueue_style( 'narcissus-left-style', get_stylesheet_directory_uri() . '/stylesheets/left-sidebar.css' );
+            break;
+        case 'none':
+            wp_enqueue_style( 'narcissus-full-width-style', get_stylesheet_directory_uri() . '/stylesheets/full-width.css' );
+            break;
+        default:
+            wp_enqueue_style( 'narcissus-right-style', get_stylesheet_directory_uri() . '/stylesheets/right-sidebar.css' );
+            break;
+    }
 	wp_enqueue_style( 'narcissus-style', get_stylesheet_directory_uri() . '/stylesheets/style.css' );
 
 	wp_enqueue_script( 'narcissus-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );

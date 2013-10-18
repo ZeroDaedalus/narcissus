@@ -10,6 +10,14 @@ class Narcissus_Settings
     private $options;
 
     /**
+     *  Valid Arguments for functions
+     */
+    private $arguments = array(
+                'credit_link' => array ( 'both', 'wordPress', 'theme', 'none'),
+                'custom_sidebar' => array ( 'right', 'left', 'none')
+                );
+
+    /**
      * Start
      */
     public function __construct()
@@ -65,7 +73,7 @@ class Narcissus_Settings
         );
 
         add_settings_section(
-            'setting_section_id', //ID
+            'general_theme_settings', //ID
             'General Settings', //Title
             array( $this, 'print_section_info'), //Callback
             'narcissus-setting-admin' //Page
@@ -74,9 +82,22 @@ class Narcissus_Settings
         add_settings_field(
             'credit_link', //ID
             'Show credit links in footer', //Title
-            array( $this, 'credit_link_callback' ), //Callback
+            array( $this, 'select_populate' ), //Callback
             'narcissus-setting-admin', //Page
-            'setting_section_id' //Section
+            'general_theme_settings', //Section
+            array( 'id' => 'credit_link',
+                   'options' => 'narcissus_theme_options' )    
+        );
+        
+        add_settings_field(
+            'custom_sidebar',
+            'Choose sidebar layout',
+            array($this, 'select_populate'),
+            'narcissus-setting-admin',
+            'general_theme_settings',
+            array( 'id' => 'custom_sidebar', //id
+                   'options' => 'narcissus_theme_options' ) //theme options
+       
         );
     }
 
@@ -87,33 +108,40 @@ class Narcissus_Settings
      */
     public function sanitize( $input ) {
     $new_input = array();
-    if( isset( $input['credit_link']))
-        $new_input['credit_link'] = $input['credit_link'];
+    foreach ( $input as $option_key=>$option_value) {
+        if (isset($option_key ) && in_array($option_value, $this->arguments[$option_key]) )
+            $new_input[$option_key] = $input[$option_key];
+        else
+            $new_input[$option_key] = $this->arguments[$option_key][0];
+    }
+
     return $new_input;
     }
      
     /**
-     *  Setting Section Callback
+     *  Settings Section Callback
      */
     public function print_section_info() {
-        echo "Here you can customize the theme to fit your needs.<br />";
-        //Testing options displays
-        $opt = get_option('narcissus_theme_options');
-        printf ("The Value of [credit_link] is %s", $opt['credit_link']);
+        echo "Here you can customize the theme to fit your needs.";
     }
+
     /**
-     *  Getting settings option array and print one of it's values
+     *  Populate select options in <select> tags
      */
-    public function credit_link_callback() {
-        ?>
-        <select id="narcissus_theme_options[credit_link]" name="narcissus_theme_options[credit_link]">
-            <option value="both" <?php selected( $this->options['credit_link'], 'both' ); ?>>Both</option>
-            <option value="wordpress" <?php selected( $this->options['credit_link'], 'wordpress' ); ?>>WordPress</option>
-            <option value="theme" <?php selected( $this->options['credit_link'], 'theme' ); ?>>Theme/Author</option>
-            <option value="none" <?php selected( $this->options['credit_link'], 'none' ); ?>>None</option>
-        </select>
-        <?php
+    public function select_populate( $input ) {
+        $args = $this->arguments[$input['id']];
+        $options = get_option( $input['options']);
+
+        printf('<select id="%2$s[%1$s]" name="%2$s[%1$s]">', $input['id'], $input['options'] ); 
+        
+        for( $i = 0; $i < sizeof($args); $i++ ) {
+            $selected = selected($options[$input['id']], $args[$i]);
+            printf('<option value="%s" %s >%s</option>', $args[$i], $selected, ucfirst($args[$i]) );
+        }
+
+        echo "</select>";
     }
+
 }
 
 if( is_admin())
