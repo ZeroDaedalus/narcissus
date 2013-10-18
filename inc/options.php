@@ -12,9 +12,9 @@ class Narcissus_Settings
     /**
      *  Valid Arguments for functions
      */
-    public $arguments = array(
+    private $arguments = array(
                 'credit_link' => array ( 'both', 'wordPress', 'theme', 'none'),
-                'custom_sidebar' => array ( 'right', 'left', 'both', 'footer', 'none')
+                'custom_sidebar' => array ( 'right', 'left', 'none')
                 );
 
     /**
