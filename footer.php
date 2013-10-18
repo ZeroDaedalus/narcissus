@@ -17,7 +17,7 @@
             <?php 
                 $theme_options = get_option('narcissus_theme_options');
                 if ( 'none' !== $theme_options['credit_link'] ) {
-                    if ( 'both' == $theme_options['credit_link'] || 'wordpress' == $theme_options['credit_link']) {?>
+                    if ( 'both' == $theme_options['credit_link'] || 'wordPress' == $theme_options['credit_link']) {?>
                         <?php printf( __( 'Proudly powered by %s', 'narcissus' ), '<a href="http://wordpress.org/" rel="generator">WordPress</a>' ); ?>
                         <?php if ( 'both' == $theme_options['credit_link']) { ?>
                             <span class="sep"> | </span>
