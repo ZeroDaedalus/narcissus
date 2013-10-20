@@ -1,7 +1,7 @@
 /*  Styles are preprocessed in Sass. Any modifications to the css file will be overwritten  */
 //Base
 @import "base";
-@import "partials/color/default";
+@import "partials/color/black";
 
 //Partials
 @import "partials/global";
@@ -29,7 +29,6 @@ body {
     font-family: sans-serif;
     width: 80%;
     margin: 0 auto;
-    color: $darker;
 }
 
 header {
@@ -67,11 +66,6 @@ a {
 
 #{headings(all)} {
     @include text-shadow($dark .0625em 0 .0625em); 
-}
-
-/*  Custom Classes  */
-.grad {
-    @include background-image(linear-gradient(right, $theme_base, $light 40%, $lighter 70%, $light));
 }
 
 /*  WordPress Classes   */

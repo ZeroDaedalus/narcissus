@@ -105,7 +105,7 @@ function narcissus_scripts() {
     $background = $option['background_color'];
     switch ( $background ) {
         case 'black':
-            wp_enqueue_style( 'narcissus-style-black', get_stylesheet_directory_uri() . '/stylesheets/style-bg-black.css' ); 
+            wp_enqueue_style( 'narcissus-style-black', get_stylesheet_directory_uri() . '/stylesheets/style-black.css' ); 
             break;
         default:
             wp_enqueue_style( 'narcissus-style-default', get_stylesheet_directory_uri() . '/stylesheets/style.css' );
