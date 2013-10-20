@@ -1,0 +1,22 @@
+@import "compass";
+
+//Color Constants
+$theme_link: #006600;
+$theme_highlight: #E34234;
+$theme_base: #a2a272;
+$dark: shade($theme_base, 40%);
+$darker:shade($theme_base, 70%);
+$light: tint($theme_base, 40%);
+$lighter: tint($theme_base, 70%);
+
+//Reset
+@include global-reset;
+
+//Vertical Rhythm
+
+$theme_base-font-size: 16px;
+$theme_base-line-height: 6px;
+$relative-font-sizing: true;
+$min-line-padding: 2px;
+@include establish-baseline;
+
