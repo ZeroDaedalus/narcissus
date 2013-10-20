@@ -107,6 +107,9 @@ function narcissus_scripts() {
         case 'black':
             wp_enqueue_style( 'narcissus-style-black', get_stylesheet_directory_uri() . '/stylesheets/style-black.css' ); 
             break;
+        case 'white':
+            wp_enqueue_style( 'narcissus-style-white', get_stylesheet_directory_uri() . '/stylesheets/style-white.css' ); 
+            break;
         default:
             wp_enqueue_style( 'narcissus-style-default', get_stylesheet_directory_uri() . '/stylesheets/style.css' );
             break;
