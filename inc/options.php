@@ -16,7 +16,6 @@ class Narcissus_Settings
                 'credit_link' => array ( 'both', 'wordPress', 'theme', 'none'),
                 'custom_sidebar' => array ( 'right', 'left', 'none'),
                 'background_color' => array ( 'default', 'black', 'white', 'red', 'blue', 'green', 'yellow', 'purple', 'orange' ),
-                'base_color' => array( 'default', 'black', 'white', 'red', 'blue', 'green', 'yellow', 'purple', 'orange' )
                 );
 
     /**
@@ -108,16 +107,6 @@ class Narcissus_Settings
             'narcissus-setting-admin',
             'general_theme_settings',
             array( 'id' => 'background_color', //id
-                   'options' => 'narcissus_theme_options' ) //theme options
-        );
-       
-        add_settings_field(
-            'base_color',
-            'Theme Base Color (font, sidebars, etc.)',
-            array($this, 'select_populate'),
-            'narcissus-setting-admin',
-            'general_theme_settings',
-            array( 'id' => 'base_color', //id
                    'options' => 'narcissus_theme_options' ) //theme options
         );
        
