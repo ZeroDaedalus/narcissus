@@ -92,13 +92,13 @@ function narcissus_scripts() {
     $sidebar = $option['custom_sidebar'];
     switch ($sidebar) {
         case 'left':
-            wp_enqueue_style( 'narcissus-left-style', get_stylesheet_directory_uri() . '/stylesheets/left-sidebar.css' );
+            wp_enqueue_style( 'narcissus-left-style', get_stylesheet_directory_uri() . '/stylesheets/layouts/left-sidebar.css' );
             break;
         case 'none':
-            wp_enqueue_style( 'narcissus-full-width-style', get_stylesheet_directory_uri() . '/stylesheets/full-width.css' );
+            wp_enqueue_style( 'narcissus-full-width-style', get_stylesheet_directory_uri() . '/stylesheets/layouts/full-width.css' );
             break;
         default:
-            wp_enqueue_style( 'narcissus-right-style', get_stylesheet_directory_uri() . '/stylesheets/right-sidebar.css' );
+            wp_enqueue_style( 'narcissus-right-style', get_stylesheet_directory_uri() . '/stylesheets/layouts/right-sidebar.css' );
             break;
     }
 
