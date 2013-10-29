@@ -1,7 +1,15 @@
 /*  Styles are preprocessed in Sass. Any modifications to the css file will be overwritten  */
 //Base
 @import "base";
-@import "partials/color/white";
+//Color Constants
+$theme_link: #666;
+$theme_highlight: #333;
+$theme_base: #000;
+$theme_opposite: contrast-color( $theme_base ) ;
+$darker: tint($theme_base, 10%);
+$dark: tint($theme_base, 40%);
+$light: shade( $theme_opposite, 40%);
+$lighter: shade( $theme_opposite, 10%);
 
 //Partials
 @import "partials/global";
@@ -19,6 +27,16 @@
 @import "partials/widget";
 @import "partials/media-queries";
 
+
+
+/*  Global  */
+html {
+    color: $theme_opposite;
+}
+/*  Custom Classes  */
+.grad {
+    @include background-image(linear-gradient(right, $theme_base, $darker 40%, $theme_base 70%, $darker));
+}
 //Main Styles
 /*  General */
 html {
