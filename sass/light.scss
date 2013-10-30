@@ -21,17 +21,14 @@ body {
 hr {
     background-color: $darker;
 }
-
+/*
 #{headings(all)} {
     @include text-shadow($darkest .0625em 0 .0625em); 
 }
+*/
 
-table {
-    border-bottom: .0625em $light solid;
-}
-
-td {
-    border-top: .0625em $light solid;    
+pre {
+	background: $lighter;
 }
 
 button,
@@ -104,7 +101,7 @@ textarea:focus {
 }
 /*  Asides  */
 /*  Links   */
-
+/*
 a {
     &:link,
     &:visited {
@@ -117,7 +114,7 @@ a {
         @include text-shadow($darker 0 .0625em .0625em); 
     }
 }
-
+*/
 /*  Comments    */
 /*  Extras  */
 

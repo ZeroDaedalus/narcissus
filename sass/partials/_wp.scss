@@ -17,9 +17,8 @@
 
 .entry-title {
     margin-bottom: 0.2em;
-    line-height: 1em;
 }
 
 .entry-meta {
-    @include adjust-font-size-to(12px);
+    @include adjust-font-size-to(14px);
 }

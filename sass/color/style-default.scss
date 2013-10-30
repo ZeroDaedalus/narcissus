@@ -1,20 +1,17 @@
 @import "compass/css3/box-shadow";
 //Color Constants
-$base: #ccff99;
-$secondary: #669933;
-$ternary: #1142aa;
-$quaternary: #ffcc00;
+$base: #efe;
+$secondary: #008500;
+$ternary: #4d1400;
+$accent: #00cc00;
 
 /*  Globals */
 html {
     background-color: $base;
 }
-pre {
-	background: $quaternary;
-}
 
 blockquote {
-    border-left: .0625em solid $secondary;
+    border-left: .0625em solid $ternary;
     padding-left: 1em;
 }
 
@@ -22,8 +19,16 @@ abbr, acronym {
 	border-bottom: .0625em dotted $ternary;
 }
 mark, ins {
-	background: $quaternary;
+	background: $secondary;
 }
+table {
+    border-bottom: .0625em $ternary solid;
+}
+
+td {
+    border-top: .0625em $ternary solid;    
+}
+
 /*  Header  */
 /*  Footer  */
 /*  Menu    */
@@ -56,7 +61,7 @@ mark, ins {
         a {
             &:link,
             &:visited {
-                color: $quaternary;
+                color: $ternary;
             }
             &:hover,
             &:focus,
@@ -71,18 +76,18 @@ mark, ins {
 .main-navigation li.current-menu-ancestor>a {
     &:link,
     &:visited {
-        border-bottom-color: $quaternary;
+        border-bottom-color: $secondary;
     }
 }
 /*  Content */
 .sticky {
     &>.entry-content {
-        border-color: $quaternary;
+        border-color: $secondary;
     }
 }
 /*  Media   */
 .wp-caption {
-    border-color: $quaternary;
+    border-color: $secondary;
 }
 
 /*  Asides  */
@@ -91,13 +96,13 @@ mark, ins {
 a {
     &:link,
     &:visited {
-        color: $secondary;
+        color: $ternary;
     }
 
     &:hover,
     &:focus,
     &:active {
-        color: $quaternary;
+        color: $secondary;
     }
 }
 
@@ -106,13 +111,13 @@ a {
 .post-edit-link {
     &:link,
     &:visited {
-        color: $quaternary;
+        color: $accent;
     }
 }
 /*  Comments    */
 .thread-even {
-    border-color: $quaternary;
-    background-color: $quaternary;
+    border-color: $secondary;
+    background-color: $secondary;
     color: $ternary;
 }
 
@@ -132,7 +137,7 @@ a {
 .depth-9>article {
     border-color: $ternary;
     background-color: $ternary;
-    color: $quaternary;
+    color: $secondary;
 }
 
 .bypostauthor>article {
