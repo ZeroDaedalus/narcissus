@@ -85,8 +85,13 @@ add_action( 'widgets_init', 'narcissus_widgets_init' );
  * Enqueue scripts and styles
  */
 function narcissus_scripts() {
+     /**
+      * Load Base Styles
+      */
+     wp_enqueue_style( 'narcissus-base-style', get_stylesheet_directory_uri() . '/stylesheets/style.css' );
+
     /**
-     *  Load new layout style depending on 'custom_sidebar' option
+     *  Load sidebar layout style
      */
     $option = get_option('narcissus_theme_options');   
     $sidebar = $option['custom_sidebar'];
@@ -102,19 +107,24 @@ function narcissus_scripts() {
             break;
     }
 
+    /**
+     *  Load selected color styles
+     */
+
     $background = $option['background_color'];
     switch ( $background ) {
         case 'black':
-            wp_enqueue_style( 'narcissus-style-black', get_stylesheet_directory_uri() . '/stylesheets/style-black.css' ); 
+            wp_enqueue_style( 'narcissus-style-black', get_stylesheet_directory_uri() . '/stylesheets/color/style-black.css' ); 
             break;
         case 'white':
-            wp_enqueue_style( 'narcissus-style-white', get_stylesheet_directory_uri() . '/stylesheets/style-white.css' ); 
+            wp_enqueue_style( 'narcissus-style-white', get_stylesheet_directory_uri() . '/stylesheets/color/style-white.css' ); 
             break;
         case 'red':
-            wp_enqueue_style( 'narcissus-style-red', get_stylesheet_directory_uri() . '/stylesheets/style-red.css' ); 
+            wp_enqueue_style( 'narcissus-style-red', get_stylesheet_directory_uri() . '/stylesheets/color/style-red.css' ); 
             break;
         default:
-            wp_enqueue_style( 'narcissus-style-default', get_stylesheet_directory_uri() . '/stylesheets/style.css' );
+            wp_enqueue_style( 'narcissus-light', get_stylesheet_directory_uri() . '/stylesheets/light.css' );
+            wp_enqueue_style( 'narcissus-style-default', get_stylesheet_directory_uri() . '/stylesheets/color/style-default.css' );
             break;
     }
 

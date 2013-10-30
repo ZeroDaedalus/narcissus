@@ -1,9 +1,29 @@
-/*  Styles are preprocessed in Sass. Any modifications to the css file will be overwritten  */
-//Base
-@import "base";
-@import "partials/color/default";
+/*  Main Stylesheet
+=============================
 
-//Partials
+    Organization
+    -----------------------------
+
+    1. Sass/Compass
+        1.1 Configuration
+    2. Styling
+        2.1 Header
+        2.2 Footer
+        2.2 Text
+        2.4 Headings
+        2.5 Navigation
+        2.6 Forms
+        2.7 Comments
+        2.8 Extras
+*/
+
+/*  1. Sass/Compass */
+
+@import "compass";
+@import "base";
+
+/*  2. Styling  */
+
 @import "partials/global";
 @import "partials/asides";
 @import "partials/alignment";
@@ -17,108 +37,5 @@
 @import "partials/nav";
 @import "partials/screenReader";
 @import "partials/widget";
-@import "partials/media-queries";
-
-//Main Styles
-/*  General */
-html {
-    @include adjust-leading-to(4);
-}
-
-body {
-    font-family: sans-serif;
-    width: 80%;
-    margin: 0 auto;
-    color: $darker;
-}
-
-header {
-    margin: rhythm(1);
-}
-
-footer {
-    padding-bottom: rhythm(1);
-    
-    .site-info {
-        @include adjust-font-size-to(12px)
-    }
-}
-
-hr {
-    background-color: $darker;
-}
-
-a {
-    text-decoration: none;
-    &:link,
-    &:visited {
-        color: $theme_link;
-        @include text-shadow($dark .1em 0 .1em); 
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: $theme_link;
-        outline: 0;
-        @include text-shadow($darker 0 .0625em .0625em); 
-    }
-} 
-
-#{headings(all)} {
-    @include text-shadow($dark .0625em 0 .0625em); 
-}
-
-/*  Custom Classes  */
-.grad {
-    @include background-image(linear-gradient(right, $theme_base, $light 40%, $lighter 70%, $light));
-}
-
-/*  WordPress Classes   */
-.site-branding {
-    width: 100%;
-    .site-title {
-        float: left;
-    }
-    .site-description {
-        float: right;
-        font-style: italic;
-    }
-}
-.site-title,
-.site-description {
-    clear: none;
-}
-
-.entry-title {
-    margin-bottom: 0.2em;
-    line-height: 1em;
-}
-
-.entry-meta {
-    @include adjust-font-size-to(12px);
-}
-
-.comment-edit-link,
-.comment-reply-link,
-.post-edit-link {
-    &:link,
-    &:visited {
-        color: $theme_highlight;
-    }
-}
-
-
-/*  Media Queries   */
-
-@include max-screen(600px) {
-
-    
-    #primary {
-        width: 100%;
-    }
-
-    #secondary {
-        width: 100%;
-    }
-}
+@import "partials/queries";
+@import "partials/wp";

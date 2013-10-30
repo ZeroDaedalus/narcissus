@@ -1,0 +1,127 @@
+/*  Light Stylesheet
+=============================
+    Note: Used on light theme variants
+
+*/
+@import "compass/css3/text-shadow";
+@import "compass/css3/box-shadow";
+
+$lightest: #fff;
+$lighter: #ccc;
+$light: #999;
+$dark: #666;
+$darker: #333;
+$darkest: #000;
+
+/*  Globals */
+body {
+    color: $darker;
+}
+
+hr {
+    background-color: $darker;
+}
+/*
+#{headings(all)} {
+    @include text-shadow($darkest .0625em 0 .0625em); 
+}
+*/
+
+pre {
+	background: $lighter;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border-color: $light $light $lighter $light;
+	background: $lighter;
+	box-shadow: inset 0 .0625em 0 rgba(255, 255, 255, 0.5), inset 0 1em 1.1em rgba(255, 255, 255, 0.5), inset 0 -.2em .75em rgba(0, 0, 0, 0.05);
+	color: rgba(0, 0, 0, .8);
+	text-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.8);
+}
+
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: $light $lighter $light $lighter;
+	box-shadow: inset 0 .0625em 0 rgba(255, 255, 255, 0.8), inset 0 1em 1.1em rgba(255, 255, 255, 0.8), inset 0 -.2em .75em rgba(0, 0, 0, 0.02);
+}
+
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: $light $lighter $lighter $lighter;
+	box-shadow: inset 0 -.0625em 0 rgba(255, 255, 255, 0.5), inset 0 .125em .2em rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: $darker;
+    border-color: $light;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	color: $darker;
+}
+/*  Header  */
+/*  Footer  */
+/*  Menu    */
+.main-navigation {
+    .children,
+    .sub-menu {
+        &:hover {
+            @include single-box-shadow($darker);
+        }
+    }
+}
+
+.main-navigation li.current_page_item>a,
+.main-navigation li.current-menu-item>a {
+    &:link,
+    &:visited {
+        color: $darker;
+    }    
+}
+/*  Asides  */
+/*  Links   */
+/*
+a {
+    &:link,
+    &:visited {
+        @include text-shadow($darkest .1em 0 .1em); 
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        @include text-shadow($darker 0 .0625em .0625em); 
+    }
+}
+*/
+/*  Comments    */
+/*  Extras  */
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: $lighter;
+	box-shadow: 0 0 .125em .125em rgba(0, 0, 0, 0.6);
+	color: $dark;
+}

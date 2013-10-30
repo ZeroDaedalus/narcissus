@@ -1,0 +1,147 @@
+@import "compass/css3/box-shadow";
+//Color Constants
+$base: #efe;
+$secondary: #008500;
+$ternary: #4d1400;
+$accent: #00cc00;
+
+/*  Globals */
+html {
+    background-color: $base;
+}
+
+blockquote {
+    border-left: .0625em solid $ternary;
+    padding-left: 1em;
+}
+
+abbr, acronym {
+	border-bottom: .0625em dotted $ternary;
+}
+mark, ins {
+	background: $secondary;
+}
+table {
+    border-bottom: .0625em $ternary solid;
+}
+
+td {
+    border-top: .0625em $ternary solid;    
+}
+
+/*  Header  */
+/*  Footer  */
+/*  Menu    */
+.main-navigation {
+    .children,
+    .sub-menu {
+
+        li:nth-child(even)>a {
+            &:link,
+            &:visited {
+                background-color: rgba($secondary, 0.9);
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $base;
+            }
+        }
+
+        li:nth-child(odd)>a {
+            &:link,
+            &:visited {
+                background-color: rgba($base, 0.9);
+            }
+        }
+    }
+
+    .nav-menu>li {
+        a {
+            &:link,
+            &:visited {
+                color: $ternary;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+                color: $secondary;
+            }
+        }
+    }
+}
+
+.main-navigation li.current_page_ancestor>a,
+.main-navigation li.current-menu-ancestor>a {
+    &:link,
+    &:visited {
+        border-bottom-color: $secondary;
+    }
+}
+/*  Content */
+.sticky {
+    &>.entry-content {
+        border-color: $secondary;
+    }
+}
+/*  Media   */
+.wp-caption {
+    border-color: $secondary;
+}
+
+/*  Asides  */
+/*  Links   */
+
+a {
+    &:link,
+    &:visited {
+        color: $ternary;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $secondary;
+    }
+}
+
+.comment-edit-link,
+.comment-reply-link,
+.post-edit-link {
+    &:link,
+    &:visited {
+        color: $accent;
+    }
+}
+/*  Comments    */
+.thread-even {
+    border-color: $secondary;
+    background-color: $secondary;
+    color: $ternary;
+}
+
+.depth-2>article,
+.depth-4>article,
+.depth-6>article,
+.depth-8>article,
+.depth-10>article {
+    border-color: $base;
+    background-color: $base;
+    color: $ternary;
+}
+
+.depth-3>article,
+.depth-5>article,
+.depth-7>article,
+.depth-9>article {
+    border-color: $ternary;
+    background-color: $ternary;
+    color: $secondary;
+}
+
+.bypostauthor>article {
+    border-color: $ternary;
+    @include single-box-shadow($ternary inset);
+}
+/*  Extras  */

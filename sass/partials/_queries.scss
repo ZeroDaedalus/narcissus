@@ -1,0 +1,15 @@
+@import "media-queries";
+
+/*  Media Queries   */
+
+@include max-screen(600px) {
+
+    
+    #primary {
+        width: 100%;
+    }
+
+    #secondary {
+        width: 100%;
+    }
+}

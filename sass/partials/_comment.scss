@@ -10,9 +10,8 @@ li.comment {
 }
 
 .thread-even {
-    border: .0625em $lighter dashed;
-    background-color: $darker;
-    color: $lighter;
+    border-width: .0625em;
+    border-style: dashed;
     margin-bottom: 0.6em;
 }
 
@@ -21,9 +20,8 @@ li.comment {
 .depth-6>article,
 .depth-8>article,
 .depth-10>article {
-    border: .0625em $theme_base solid;
-    background-color: $dark;
-    color: $lighter;
+    border-width: .0625em;
+    border-style: solid;
     padding: inherit;
 }
 
@@ -31,9 +29,8 @@ li.comment {
 .depth-5>article,
 .depth-7>article,
 .depth-9>article {
-    border: .0625em $lighter solid;
-    background-color: $theme_base;
-    color: $lighter;
+    border-width: .0625em;
+    border-style: solid;
     padding: inherit;
 }
 
@@ -43,6 +40,6 @@ li.comment {
     padding: .6em;
 }
 .bypostauthor>article {
-    border: .0625em $theme_highlight solid;
-    @include single-box-shadow($theme_highlight inset);
+    border-width: .0625em;
+    border-style: solid;
 }
