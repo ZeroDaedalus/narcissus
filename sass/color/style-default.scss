@@ -1,111 +1,33 @@
-/*  Styles are preprocessed in Sass. Any modifications to the css file will be overwritten  */
-//Base
-@import "base";
-
+@import "compass/css3/box-shadow";
 //Color Constants
-$theme_link: #006600;
-$theme_highlight: #E34234;
-$theme_base: #a2a272;
-$dark: shade($theme_base, 40%);
-$darker:shade($theme_base, 70%);
-$light: tint($theme_base, 40%);
-$lighter: tint($theme_base, 70%);
+$base-color: #53df00;
+$primary-color: #ffdf00;
+$secondary-color: #369100;
+$ternary-color: #1142aa;
 
-//Partials
-@import "partials/global";
-@import "partials/asides";
-@import "partials/alignment";
-@import "partials/clear";
-@import "partials/comment";
-@import "partials/content";
-@import "partials/embed";
-@import "partials/infiniteScroll";
-@import "partials/media";
-@import "partials/menu";
-@import "partials/nav";
-@import "partials/screenReader";
-@import "partials/widget";
-@import "partials/media-queries";
-
-
-//Main Styles
-/*  General */
-html {
-    @include adjust-leading-to(4);
+/*  Globals */
+abbr, acronym {
+	border-bottom: .0625em dotted $ternary-color;
 }
-
-body {
-    font-family: sans-serif;
-    width: 80%;
-    margin: 0 auto;
-    color: $darker;
+mark, ins {
+	background: $secondary-color;
 }
-
-header {
-    margin: rhythm(1);
-}
-
-footer {
-    padding-bottom: rhythm(1);
-    
-    .site-info {
-        @include adjust-font-size-to(12px)
-    }
-}
-
-hr {
-    background-color: $darker;
-}
+/*  Header  */
+/*  Footer  */
+/*  Asides  */
+/*  Links   */
 
 a {
-    text-decoration: none;
     &:link,
     &:visited {
-        color: $theme_link;
-        @include text-shadow($dark .1em 0 .1em); 
+        color: $primary-color;
     }
 
     &:hover,
     &:focus,
     &:active {
-        color: $theme_link;
-        outline: 0;
-        @include text-shadow($darker 0 .0625em .0625em); 
+        color: $secondary-color;
     }
-} 
-
-#{headings(all)} {
-    @include text-shadow($dark .0625em 0 .0625em); 
-}
-
-/*  Custom Classes  */
-.grad {
-    @include background-image(linear-gradient(right, $theme_base, $light 40%, $lighter 70%, $light));
-}
-
-/*  WordPress Classes   */
-.site-branding {
-    width: 100%;
-    .site-title {
-        float: left;
-    }
-    .site-description {
-        float: right;
-        font-style: italic;
-    }
-}
-.site-title,
-.site-description {
-    clear: none;
-}
-
-.entry-title {
-    margin-bottom: 0.2em;
-    line-height: 1em;
-}
-
-.entry-meta {
-    @include adjust-font-size-to(12px);
 }
 
 .comment-edit-link,
@@ -113,21 +35,37 @@ a {
 .post-edit-link {
     &:link,
     &:visited {
-        color: $theme_highlight;
+        color: $secondary-color;
     }
 }
-
-
-/*  Media Queries   */
-
-@include max-screen(600px) {
-
-    
-    #primary {
-        width: 100%;
-    }
-
-    #secondary {
-        width: 100%;
-    }
+/*  Comments    */
+.thread-even {
+    border-color: $secondary-color;
+    background-color: $secondary-color;
+    color: $ternary-color;
 }
+
+.depth-2>article,
+.depth-4>article,
+.depth-6>article,
+.depth-8>article,
+.depth-10>article {
+    border-color: $base-color;
+    background-color: $base-color;
+    color: $primary-color;
+}
+
+.depth-3>article,
+.depth-5>article,
+.depth-7>article,
+.depth-9>article {
+    border-color: $primary-color;
+    background-color: $primary-color;
+    color: $secondary-color;
+}
+
+.bypostauthor>article {
+    border-color: $ternary-color;
+    @include single-box-shadow($ternary-color inset);
+}
+/*  Extras  */

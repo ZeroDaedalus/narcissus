@@ -1,14 +1,29 @@
 /*
-Syntax error: Undefined variable: "$lighter".
-        on line 98 of /var/www/warzone/wp-content/themes/narcissus/sass/partials/_global.scss
-        from line 27 of /var/www/warzone/wp-content/themes/narcissus/sass/style.scss
+Syntax error: Undefined variable: "$theme_highlight".
+        on line 7 of /var/www/warzone/wp-content/themes/narcissus/sass/partials/_content.scss
+        from line 32 of /var/www/warzone/wp-content/themes/narcissus/sass/style.scss
 
 Backtrace:
-/var/www/warzone/wp-content/themes/narcissus/sass/partials/_global.scss:98
-/var/www/warzone/wp-content/themes/narcissus/sass/style.scss:27
+/var/www/warzone/wp-content/themes/narcissus/sass/partials/_content.scss:7
+/var/www/warzone/wp-content/themes/narcissus/sass/style.scss:32
 /var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/script/variable.rb:49:in `_perform'
 /var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/script/node.rb:40:in `perform'
+/var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/script/list.rb:70:in `_perform'
+/var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/script/list.rb:70:in `map'
+/var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/script/list.rb:70:in `_perform'
+/var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/script/node.rb:40:in `perform'
 /var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:298:in `visit_prop'
+/var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
+/var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:109:in `visit_children'
+/var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:121:in `with_environment'
+/var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:108:in `visit_children'
+/var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:320:in `visit_rule'
 /var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
 /var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
 /var/lib/gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
@@ -57,15 +72,15 @@ Backtrace:
 /var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
 /var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
 /var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
-/usr/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:36:in `to_proc'
+/var/lib/gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:95:in `perform'
 /var/lib/gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
 /var/lib/gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
 /var/lib/gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
-/var/lib/gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:31:in `create'
-/var/lib/gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:26:in `created'
-/var/lib/gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:25:in `each'
-/var/lib/gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:25:in `created'
-/var/lib/gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:17:in `refresh'
+/var/lib/gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:39:in `delete'
+/var/lib/gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:32:in `deleted'
+/var/lib/gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:31:in `each'
+/var/lib/gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:31:in `deleted'
+/var/lib/gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:16:in `refresh'
 /var/lib/gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/inotify.rb:12:in `add_handler'
 /var/lib/gems/1.8/gems/rb-inotify-0.9.1/lib/rb-inotify/notifier.rb:205:in `call'
 /var/lib/gems/1.8/gems/rb-inotify-0.9.1/lib/rb-inotify/notifier.rb:205:in `watch'
@@ -93,4 +108,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$lighter\".\A         on line 98 of /var/www/warzone/wp-content/themes/narcissus/sass/partials/_global.scss\A         from line 27 of /var/www/warzone/wp-content/themes/narcissus/sass/style.scss"; }
+  content: "Syntax error: Undefined variable: \"$theme_highlight\".\A         on line 7 of /var/www/warzone/wp-content/themes/narcissus/sass/partials/_content.scss\A         from line 32 of /var/www/warzone/wp-content/themes/narcissus/sass/style.scss"; }

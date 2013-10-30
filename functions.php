@@ -85,8 +85,13 @@ add_action( 'widgets_init', 'narcissus_widgets_init' );
  * Enqueue scripts and styles
  */
 function narcissus_scripts() {
+     /**
+      * Load Base Styles
+      */
+     wp_enqueue_style( 'narcissus-base-style', get_stylesheet_directory_uri() . '/stylesheets/style.css' );
+
     /**
-     *  Load new layout style depending on 'custom_sidebar' option
+     *  Load sidebar layout style
      */
     $option = get_option('narcissus_theme_options');   
     $sidebar = $option['custom_sidebar'];
@@ -101,6 +106,10 @@ function narcissus_scripts() {
             wp_enqueue_style( 'narcissus-right-style', get_stylesheet_directory_uri() . '/stylesheets/layouts/right-sidebar.css' );
             break;
     }
+
+    /**
+     *  Load selected color styles
+     */
 
     $background = $option['background_color'];
     switch ( $background ) {
