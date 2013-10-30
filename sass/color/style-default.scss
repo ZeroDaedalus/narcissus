@@ -14,6 +14,59 @@ mark, ins {
 }
 /*  Header  */
 /*  Footer  */
+/*  Menu    */
+.main-navigation {
+    .children,
+    .sub-menu {
+
+        li:nth-child(even)>a {
+            &:link,
+            &:visited {
+                background-color: rgba($primary-color, 0.9);
+            }
+        }
+
+        li:nth-child(odd)>a {
+            &:link,
+            &:visited {
+                background-color: rgba($secondary-color, 0.9);
+            }
+        }
+    }
+
+    .nav-menu>li {
+        a {
+            &:link,
+            &:visited {
+                color: $secondary-color;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.main-navigation li.current_page_ancestor>a,
+.main-navigation li.current-menu-ancestor>a {
+    &:link,
+    &:visited {
+        border-bottom-color: $secondary-color;
+    }
+}
+/*  Content */
+.sticky {
+    &>.entry-content {
+        border-color: $secondary-color;
+    }
+}
+/*  Media   */
+.wp-caption {
+    border-color: $secondary-color;
+}
+
 /*  Asides  */
 /*  Links   */
 

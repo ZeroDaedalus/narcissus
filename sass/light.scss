@@ -87,6 +87,23 @@ textarea:focus {
 }
 /*  Header  */
 /*  Footer  */
+/*  Menu    */
+.main-navigation {
+    .children,
+    .sub-menu {
+        &:hover {
+            @include single-box-shadow($darker);
+        }
+    }
+}
+
+.main-navigation li.current_page_item>a,
+.main-navigation li.current-menu-item>a {
+    &:link,
+    &:visited {
+        color: $darker;
+    }    
+}
 /*  Asides  */
 /*  Links   */
 
@@ -105,3 +122,11 @@ a {
 
 /*  Comments    */
 /*  Extras  */
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: $lighter;
+	box-shadow: 0 0 .125em .125em rgba(0, 0, 0, 0.6);
+	color: $dark;
+}

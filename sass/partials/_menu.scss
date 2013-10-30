@@ -7,41 +7,11 @@
 	display: block;
 	float: left;
 	width: 100%;
-    .children,
-    .sub-menu {
-
-        &:hover {
-            @include single-box-shadow($darker);
-        }
-        li:nth-child(even)>a {
-            &:link,
-            &:visited {
-                background-color: rgba($theme_base, 0.9);
-            }
-        }
-
-        li:nth-child(odd)>a {
-            &:link,
-            &:visited {
-                background-color: rgba($light, 0.9);
-            }
-        }
-    }
-
     .nav-menu>li {
         margin-left: 1em;
         a {
             padding: .3em;
             border: .125em transparent solid;
-            &:link,
-            &:visited {
-                color: $theme_highlight;
-            }
-            &:hover,
-            &:focus,
-            &:active {
-                color: $theme_link;
-            }
         }
     }
 }
@@ -94,19 +64,13 @@
 .main-navigation ul li:hover > ul {
 	display: block;
 }
-.main-navigation li.current_page_item>a,
-.main-navigation li.current-menu-item>a {
-    &:link,
-    &:visited {
-        color: $darker;
-    }    
-}
 
 .main-navigation li.current_page_ancestor>a,
 .main-navigation li.current-menu-ancestor>a {
     &:link,
     &:visited {
-        border-bottom: .1em $darker dotted;
+        border-bottom-width: .1em;
+        border-bottom-style: dotted;
     }
 }
 /* Small menu */

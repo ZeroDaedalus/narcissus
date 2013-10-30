@@ -4,7 +4,8 @@
 
 .sticky {
     &>.entry-content {
-        border: .0625em $theme_highlight dashed;
+        border-width: .0625em;
+        border-style: dashed;
         padding: .4em;
     }
 }
