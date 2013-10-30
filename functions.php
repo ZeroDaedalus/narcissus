@@ -123,6 +123,7 @@ function narcissus_scripts() {
             wp_enqueue_style( 'narcissus-style-red', get_stylesheet_directory_uri() . '/stylesheets/color/style-red.css' ); 
             break;
         default:
+            wp_enqueue_style( 'narcissus-light', get_stylesheet_directory_uri() . '/stylesheets/light.css' );
             wp_enqueue_style( 'narcissus-style-default', get_stylesheet_directory_uri() . '/stylesheets/color/style-default.css' );
             break;
     }

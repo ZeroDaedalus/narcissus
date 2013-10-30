@@ -1,16 +1,28 @@
 @import "compass/css3/box-shadow";
 //Color Constants
-$base-color: #53df00;
-$primary-color: #ffdf00;
-$secondary-color: #369100;
-$ternary-color: #1142aa;
+$base: #ccff99;
+$secondary: #669933;
+$ternary: #1142aa;
+$quaternary: #ffcc00;
 
 /*  Globals */
+html {
+    background-color: $base;
+}
+pre {
+	background: $quaternary;
+}
+
+blockquote {
+    border-left: .0625em solid $secondary;
+    padding-left: 1em;
+}
+
 abbr, acronym {
-	border-bottom: .0625em dotted $ternary-color;
+	border-bottom: .0625em dotted $ternary;
 }
 mark, ins {
-	background: $secondary-color;
+	background: $quaternary;
 }
 /*  Header  */
 /*  Footer  */
@@ -22,14 +34,20 @@ mark, ins {
         li:nth-child(even)>a {
             &:link,
             &:visited {
-                background-color: rgba($primary-color, 0.9);
+                background-color: rgba($secondary, 0.9);
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $base;
             }
         }
 
         li:nth-child(odd)>a {
             &:link,
             &:visited {
-                background-color: rgba($secondary-color, 0.9);
+                background-color: rgba($base, 0.9);
             }
         }
     }
@@ -38,12 +56,12 @@ mark, ins {
         a {
             &:link,
             &:visited {
-                color: $secondary-color;
+                color: $quaternary;
             }
             &:hover,
             &:focus,
             &:active {
-                color: $primary-color;
+                color: $secondary;
             }
         }
     }
@@ -53,18 +71,18 @@ mark, ins {
 .main-navigation li.current-menu-ancestor>a {
     &:link,
     &:visited {
-        border-bottom-color: $secondary-color;
+        border-bottom-color: $quaternary;
     }
 }
 /*  Content */
 .sticky {
     &>.entry-content {
-        border-color: $secondary-color;
+        border-color: $quaternary;
     }
 }
 /*  Media   */
 .wp-caption {
-    border-color: $secondary-color;
+    border-color: $quaternary;
 }
 
 /*  Asides  */
@@ -73,13 +91,13 @@ mark, ins {
 a {
     &:link,
     &:visited {
-        color: $primary-color;
+        color: $secondary;
     }
 
     &:hover,
     &:focus,
     &:active {
-        color: $secondary-color;
+        color: $quaternary;
     }
 }
 
@@ -88,14 +106,14 @@ a {
 .post-edit-link {
     &:link,
     &:visited {
-        color: $secondary-color;
+        color: $quaternary;
     }
 }
 /*  Comments    */
 .thread-even {
-    border-color: $secondary-color;
-    background-color: $secondary-color;
-    color: $ternary-color;
+    border-color: $quaternary;
+    background-color: $quaternary;
+    color: $ternary;
 }
 
 .depth-2>article,
@@ -103,22 +121,22 @@ a {
 .depth-6>article,
 .depth-8>article,
 .depth-10>article {
-    border-color: $base-color;
-    background-color: $base-color;
-    color: $primary-color;
+    border-color: $base;
+    background-color: $base;
+    color: $ternary;
 }
 
 .depth-3>article,
 .depth-5>article,
 .depth-7>article,
 .depth-9>article {
-    border-color: $primary-color;
-    background-color: $primary-color;
-    color: $secondary-color;
+    border-color: $ternary;
+    background-color: $ternary;
+    color: $quaternary;
 }
 
 .bypostauthor>article {
-    border-color: $ternary-color;
-    @include single-box-shadow($ternary-color inset);
+    border-color: $ternary;
+    @include single-box-shadow($ternary inset);
 }
 /*  Extras  */

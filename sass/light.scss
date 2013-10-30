@@ -3,6 +3,8 @@
     Note: Used on light theme variants
 
 */
+@import "compass/css3/text-shadow";
+@import "compass/css3/box-shadow";
 
 $lightest: #fff;
 $lighter: #ccc;
@@ -13,19 +15,15 @@ $darkest: #000;
 
 /*  Globals */
 body {
-    color: $dark;
+    color: $darker;
 }
 
 hr {
-    background-color: $dark;
+    background-color: $darker;
 }
 
 #{headings(all)} {
-    @include text-shadow($dark .0625em 0 .0625em); 
-}
-
-pre {
-	background: $light;
+    @include text-shadow($darkest .0625em 0 .0625em); 
 }
 
 table {
@@ -51,7 +49,7 @@ button:hover,
 html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: $light $lighter $theme_base $lighter;
+	border-color: $light $lighter $light $lighter;
 	box-shadow: inset 0 .0625em 0 rgba(255, 255, 255, 0.8), inset 0 1em 1.1em rgba(255, 255, 255, 0.8), inset 0 -.2em .75em rgba(0, 0, 0, 0.02);
 }
 
@@ -63,7 +61,7 @@ button:active,
 html input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	border-color: $theme_base $lighter $lighter $lighter;
+	border-color: $light $lighter $lighter $lighter;
 	box-shadow: inset 0 -.0625em 0 rgba(255, 255, 255, 0.5), inset 0 .125em .2em rgba(0, 0, 0, 0.15);
 }
 
@@ -110,7 +108,7 @@ textarea:focus {
 a {
     &:link,
     &:visited {
-        @include text-shadow($dark .1em 0 .1em); 
+        @include text-shadow($darkest .1em 0 .1em); 
     }
 
     &:hover,
