@@ -114,9 +114,11 @@ function narcissus_scripts() {
     $background = $option['background_color'];
     switch ( $background ) {
         case 'black':
+            wp_enqueue_style( 'narcissus-dark', get_stylesheet_directory_uri() . '/stylesheets/dark.css' );
             wp_enqueue_style( 'narcissus-style-black', get_stylesheet_directory_uri() . '/stylesheets/color/style-black.css' ); 
             break;
         case 'white':
+            wp_enqueue_style( 'narcissus-light', get_stylesheet_directory_uri() . '/stylesheets/light.css' );
             wp_enqueue_style( 'narcissus-style-white', get_stylesheet_directory_uri() . '/stylesheets/color/style-white.css' ); 
             break;
         case 'red':
