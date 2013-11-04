@@ -122,6 +122,7 @@ function narcissus_scripts() {
             wp_enqueue_style( 'narcissus-style-white', get_stylesheet_directory_uri() . '/stylesheets/color/style-white.css' ); 
             break;
         case 'red':
+            wp_enqueue_style( 'narcissus-dark', get_stylesheet_directory_uri() . '/stylesheets/dark.css' );
             wp_enqueue_style( 'narcissus-style-red', get_stylesheet_directory_uri() . '/stylesheets/color/style-red.css' ); 
             break;
         default:

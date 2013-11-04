@@ -1,9 +1,3 @@
-//Color Constants
-$theme_link: #c66;
-$theme_highlight: #f33;
-$theme_base: #300;
-$theme_opposite: contrast-color( $theme_base ) ;
-$darker: tint($theme_base, 10%);
-$dark: tint($theme_base, 40%);
-$light: shade( $theme_opposite, 40%);
-$lighter: shade( $theme_opposite, 10%);
+@import "../partials/red";
+@import "../partials/coloring";
+
