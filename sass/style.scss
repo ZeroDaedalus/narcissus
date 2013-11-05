@@ -1,0 +1,41 @@
+/*  Main Stylesheet
+=============================
+
+    Organization
+    -----------------------------
+
+    1. Sass/Compass
+        1.1 Configuration
+    2. Styling
+        2.1 Header
+        2.2 Footer
+        2.2 Text
+        2.4 Headings
+        2.5 Navigation
+        2.6 Forms
+        2.7 Comments
+        2.8 Extras
+*/
+
+/*  1. Sass/Compass */
+
+@import "compass";
+@import "base";
+
+/*  2. Styling  */
+
+@import "partials/global";
+@import "partials/asides";
+@import "partials/alignment";
+@import "partials/clear";
+@import "partials/comment";
+@import "partials/content";
+@import "partials/embed";
+@import "partials/infiniteScroll";
+@import "partials/media";
+@import "partials/menu";
+@import "partials/nav";
+@import "partials/screenReader";
+@import "partials/widget";
+@import "partials/queries";
+@import "partials/wp";

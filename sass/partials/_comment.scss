@@ -1,0 +1,45 @@
+
+/* =Comments
+----------------------------------------------- */
+
+.comment-content a {
+	word-wrap: break-word;
+}
+li.comment {
+    list-style: none;
+}
+
+.thread-even {
+    border-width: .0625em;
+    border-style: dashed;
+    margin-bottom: 0.6em;
+}
+
+.depth-2>article,
+.depth-4>article,
+.depth-6>article,
+.depth-8>article,
+.depth-10>article {
+    border-width: .0625em;
+    border-style: solid;
+    padding: inherit;
+}
+
+.depth-3>article,
+.depth-5>article,
+.depth-7>article,
+.depth-9>article {
+    border-width: .0625em;
+    border-style: solid;
+    padding: inherit;
+}
+
+.comment-list>li article,
+.comment-respond{
+    margin: .6em;
+    padding: .6em;
+}
+.bypostauthor>article {
+    border-width: .0625em;
+    border-style: solid;
+}
