@@ -137,6 +137,10 @@ function narcissus_scripts() {
             wp_enqueue_style( 'narcissus-light', get_stylesheet_directory_uri() . '/stylesheets/light.css' );
             wp_enqueue_style( 'narcissus-style-yellow', get_stylesheet_directory_uri() . '/stylesheets/color/style-yellow.css' ); 
             break;
+        case 'purple':
+            wp_enqueue_style( 'narcissus-dark', get_stylesheet_directory_uri() . '/stylesheets/dark.css' );
+            wp_enqueue_style( 'narcissus-style-purple', get_stylesheet_directory_uri() . '/stylesheets/color/style-purple.css' ); 
+            break;
         default:
             wp_enqueue_style( 'narcissus-light', get_stylesheet_directory_uri() . '/stylesheets/light.css' );
             wp_enqueue_style( 'narcissus-style-default', get_stylesheet_directory_uri() . '/stylesheets/color/style-default.css' );
