@@ -1,0 +1,24 @@
+
+/*  WordPress Classes   */
+.site-branding {
+    width: 100%;
+    .site-title {
+        float: left;
+    }
+    .site-description {
+        float: right;
+        font-style: italic;
+    }
+}
+.site-title,
+.site-description {
+    clear: none;
+}
+
+.entry-title {
+    margin-bottom: 0.2em;
+}
+
+.entry-meta {
+    @include adjust-font-size-to(14px);
+}
